@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                checkout scm
+                 git branch:  'main' , credentialsId: 'github', url: 'https://github.com/harikap240/Project1'
             }
         }
         stage('Build') {
